@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation and Logistics </title>
+    <link rel ="stylesheet" href="ssuccess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header-container">
+        <img src="images/Jew_logo.png" alt="Company Logo" class="logo">
+        <h1>Jewargi Transportation and Logistics </h1>
+    </div>
+    
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+            <a href="https://api.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    <!-- Login Page -->
+    <div id="loginPage">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+
+    <!-- Table Names Page -->
+    <div id="tableNamesPage" class="hidden">
+        <div class="section">
+            <h2>Services</h2>
+            <div class="container">
+                <div class="box">
+                    <a href="#transportRecords" class="nav-link" onclick="showPage('transportRecordsPage')">Transport Records</a>
+                </div>
+                <div class="box">
+                    <a href="#driverRecords" class="nav-link" onclick="showPage('driverRecordsPage')">Driver Records</a>
+                </div>
+                <div class="box">
+                    <a href="#routeRecords" class="nav-link" onclick="showPage('routeRecordsPage')">Route Records</a>
+                </div>
+                <div class="box">
+                    <a href="#assignmentRecords" class="nav-link" onclick="showPage('assignmentRecordsPage')">Assignment Records</a>
+                </div>
+                <div class="box">
+                    <a href="#trackingRecords" class="nav-link" onclick="showPage('trackingRecordsPage')">Tracking Records</a>
+                </div>
+                <div class="box">
+                    <a href="#customerRecords" class="nav-link" onclick="showPage('customerRecordsPage')">Customer Records</a>
+                </div>
+                <div class="box">
+                    <a href="#shipmentRecords" class="nav-link" onclick="showPage('shipmentRecordsPage')">Shipment Records</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Respective Table Link Pages -->
+    <div id="transportRecordsPage" class="hidden">
+        <form id="transportForm">
+            <h2>Add New Transport Record</h2>
+            <label for="vehicleId">Vehicle ID:</label>
+            <input type="text" id="vehicleId" name="vehicleId" required>
+            <label for="licensePlate">License Plate:</label>
+            <input type="text" id="licensePlate" name="licensePlate" required>
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required>
+            <label for="capacities">Capacities:</label>
+            <input type="text" id="capacities" name="capacities" required>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+            <button type="submit">Add Record</button>
+        </form>
+        <h2>Vehicle Records</h2>
+        <table id="transportTable">
+            <thead>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>License Plate</th>
+                    <th>Model</th>
+                    <th>Capacities</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transport records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"> <img src="images/back.png" alt="back Logo" class="backing"></a>
+    </div>
+
+    <div id="driverRecordsPage" class="hidden">
+        <form id="driverForm">
+            <h2>Add New Driver Record</h2>
+            <label for="driverId">Driver ID:</label>
+            <input type="text" id="driverId" name="driverId" required>
+            <label for="dname">Driver Name:</label>
+            <input type="text" id="dname" name="dname" required>
+            <label for="licenseNumber">License Number:</label>
+            <input type="text" id="licenseNumber" name="licenseNumber" required>
+            <label for="contactInfo">Contact Info:</label>
+            <input type="text" id="contactInfo" name="contactInfo" required>
+            <button type="submit">Add Record</button>
+        </form>
+        <h2>Driver Records</h2>
+        <table id="driverTable">
+            <thead>
+                <tr>
+                    <th>Driver ID</th>
+                    <th>Name</th>
+                    <th>License Number</th>
+                    <th>Contact Info</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Driver records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="back Logo" class="backing"></a>
+    </div>
+
+    <div id="routeRecordsPage" class="hidden">
+        <form id="routeForm">
+            <h2>Add New Route Record</h2>
+            <label for="routeId">Route ID:</label>
+            <input type="text" id="routeId" name="routeId" required>
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" name="origin" required>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+            <label for="distance">Distance:</label>
+            <input type="text" id="distance" name="distance" required>
+            <button type="submit">Add Record</button>
+        </form>
+        <h2>Route Records</h2>
+        <table id="routeTable">
+            <thead>
+                <tr>
+                    <th>Route ID</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Distance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Route records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="Back Logo" class="backing"></a>
+    </div>
+
+    <div id="assignmentRecordsPage" class="hidden">
+        <form id="assignmentForm">
+            <h2>Add New Assignment Record</h2>
+            <label for="assignmentId">Assignment ID:</label>
+            <input type="text" id="assignmentId" name="assignmentId" required>
+            <label for="transportId">Transport ID:</label>
+            <input type="text" id="transportId" name="transportId" required>
+            <label for="driverId">Driver ID:</label>
+            <input type="text" id="driverId" name="driverId" required>
+            <label for="routeId">Route ID:</label>
+            <input type="text" id="routeId" name="routeId" required>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <button type="submit">Add Record</button>
+        </form>
+        <h2>Assignment Records</h2>
+        <table id="assignmentTable">
+            <thead>
+                <tr>
+                    <th>Assignment ID</th>
+                    <th>Transport ID</th>
+                    <th>Driver ID</th>
+                    <th>Route ID</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Assignment records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="Back Logo" class="backing"></a>
+    </div>
+
+    <div id="trackingRecordsPage" class="hidden">
+        <form id="trackingForm">
+            
+                <label for="trackingId">Tracking ID:</label>
+                <input type="text" id="trackingId" required>
+                <br>
+                <label for="trackingShipmentId">Shipment ID:</label>
+                <input type="text" id="trackingShipmentId" required>
+                <br>
+                <label for="trackingLocation">Location:</label>
+                <input type="text" id="trackingLocation" required>
+                <br>
+                <label for="trackingStatus">Status:</label>
+                <input type="text" id="trackingStatus" required>
+                <br>
+                <label for="trackingTimestamp">Timestamp:</label>
+                <input type="datetime-local" id="trackingTimestamp" required>
+                <br>
+                <button type="submit">Add Tracking Record</button>
+            </form>
+        
+            <!-- Tracking Table -->
+            <table id="trackingTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Tracking ID</th>
+                        <th>Shipment ID</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+             
+           
+        
+                <!-- Tracking records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="Back Logo" class="backing"></a>
+    </div>
+
+    <div id="customerRecordsPage" class="hidden">
+        <form id="customerForm">
+            <h2>Add New Customer Record</h2>
+            <label for="customerId">Customer ID:</label>
+            <input type="text" id="customerId" name="customerId" required>
+            <label for="cname">Customer Name:</label>
+            <input type="text" id="cname" name="cname" required>
+            <label for="contactDetails">Contact Details:</label>
+            <input type="text" id="contactDetails" name="contactDetails" required>
+            <button type="submit">Add Record</button>
+        </form>
+        <h2>Customer Records</h2>
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Contact Details</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="Back Logo" class="backing"></a>
+    </div>
+
+    <div id="shipmentRecordsPage" class="hidden">
+        <form id="shipmentForm">
+            <form id="shipmentForm">
+                <label for="shipmentId">Shipment ID:</label>
+                <input type="text" id="shipmentId" required>
+                <br>
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" required>
+                <br>
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" required>
+                <br>
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" required>
+                <br>
+                <label for="status">Status:</label>
+                <input type="text" id="status" required>
+                <br>
+                <button type="submit">Add Shipment Record</button>
+            </form>
+        
+            <!-- Shipment Table -->
+            <table id="shipmentTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Shipment ID</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Weight</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+          
+                <!-- Shipment records will be added here -->
+            </tbody>
+        </table>
+        <a href="#" onclick="showPage('tableNamesPage')"><img src="images/back.png" alt="Back Logo" class="backing"></a>
+    </div>
+
+    <script src="./ssuccess.js"></script>
+
+
+</body>
+</html>
